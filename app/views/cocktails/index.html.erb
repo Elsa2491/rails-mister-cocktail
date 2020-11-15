@@ -1,0 +1,11 @@
+<h1>All cocktails</h1>
+
+<%= link_to "Add a new cocktail", new_cocktail_path %>
+<% @cocktails.each do |cocktail| %>
+<h3><li><%= cocktail.name %></li></h3>
+<!-- Pour mettre un lien vers la show -->
+<%# link_to "More details", cocktail_path(id: cocktail.id) %>
+<!-- Soit de facon plus simple on peut juste donner l'objet -->
+<%= link_to "More details", cocktail_path(cocktail) %>
+<%= link_to "- Add a dose", cocktail_path(cocktail) %>
+<% end  %>
