@@ -21,6 +21,10 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def destroy
+
+  end
+
   private
 
   # Creation des strong_param
